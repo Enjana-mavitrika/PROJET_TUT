@@ -1,0 +1,137 @@
+{% extends "layout.html.twig" %} 
+{% block title %}Ajout Offres{% endblock %} 
+
+{% block content %}
+<!-- content -->
+
+<main>
+
+
+
+    <h3>AJOUTER UNE OFFRE</h3>
+    <form class="form container-fluid " id="ajout-offre" method="post">
+        <fieldset class="col-md-6">
+
+            <div class="form-group row">
+                <label for="quantite-colis" class="col-md-12">La quantité disponible dans votre baggage : *</label>
+                <div class="col-md-5 col-sm-5">
+                    <div class="input-group">
+                        <span class="input-group-addon">Colis</span>
+                        <input type="number" class="form-control" id="quantite-colis" name="quantite_colis" placeholder="en kg" min="0" max="40" />
+                        <p class="help"></p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2">
+                    <div class="input-group">
+                        <span class="input-group-addon">Lettre
+                        </span>
+                        <input type="number" class="form-control" id="quantite-lettre" name="quantite_lettre" placeholder="enveloppe" min="0" max="100" />
+                        <p class="help"></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label for="prix-colis" class="col-md-12 col-sm-12">Le prix à l'unité : *</label>
+                <div class="col-md-5 col-sm-5">
+                    <div class="input-group">
+                        <span class="input-group-addon"> 1 kg</span>
+                        <input type="number" class="form-control" id="prix-colis" name="prix_colis" placeholder="en &euro;" min="0" max="50" />
+                        <p class="aide"></p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2">
+                    <div class="input-group">
+                        <span class="input-group-addon">1 env
+                        </span>
+                        <input type="number" class="form-control" id="prix-lettre" name="prix_lettre" placeholder="en &euro;" min="0" max="50" />
+                        <p class=""></p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone-offre">Le numéro de téléphone pour vous contacter : *</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                    <input type="phone" class="form-control" id="phone-offre" name="phone_offre" placeholder="Entrez votre numéro téléphone ici" />
+                    <p class="help"></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="precision-offre">Une précision à propos de l'offre : (Facultatif)</label>
+                <textarea class="form-control" rows="3" placeholder="Ecrire ici..."></textarea>
+            </div>
+
+            <legend>Details baggages</legend>
+        </fieldset>
+
+        <fieldset class="col-md-6">
+
+            <div class="form-group row">
+                <label for="ville-depart" class="col-md-12 col-sm-12">Les détails de votre départ : *</label>
+                <div class="input-group container-fluid">
+                    <span class="input-group-addon">ville :</span>
+                    <input type="text" class="form-control input-saisie-ville" id="ville-depart" name="ville_depart" placeholder="Saisissez la ville ici" />
+                    <div class="aide-saisie"></div>
+                    <p class="help"></p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">date :
+                        </span>
+                        <input type="date" class="form-control" id="date-depart" name="date_depart" placeholder="" />
+                        <p class="help"></p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+                    <div class="input-group">
+                        <span class="input-group-addon">heure :
+                        </span>
+                        <input type="time" class="form-control" id="heure-depart" name="heure_depart" placeholder="" />
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label for="ville-arrive" class="col-md-12 col-sm-12">Les détails de votre arrivée : *</label>
+
+                <div class="input-group container-fluid">
+                    <span class="input-group-addon">ville :</span>
+                    <input type="text" class="form-control input-saisie-ville" id="ville-arrive" name="ville_arrive" placeholder="Saisissez la ville ici" />
+                    <div class="aide-saisie"></div>
+                    <p class="help"></p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">date :
+                        </span>
+                        <input type="date" class="form-control" id="date-arrive" name="date_arrive" placeholder="" />
+                        <p class="aide-saisie"></p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+                    <div class="input-group">
+                        <span class="input-group-addon">heure :
+                        </span>
+                        <input type="time" class="form-control" id="heure-arrive" name="heure_arrive" placeholder="" />
+                    </div>
+                </div>
+
+            </div>
+
+            <legend>Itinéraire voyage</legend>
+        </fieldset>
+        <div class="form-group col-md-6 col-sm-6">
+            <button type="submit" class="btn btn-info btn-lg"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter</button>
+            <div class="help"></div>
+        </div>
+
+    </form>
+
+
+</main>
+
+<!-- / content -->
+{% endblock %}

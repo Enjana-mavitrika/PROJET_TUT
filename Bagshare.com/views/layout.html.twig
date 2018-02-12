@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bagshare - {% block title %}{% endblock %}</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/bagshare_style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- / style -->
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ovo" rel="stylesheet">
+    <!-- / fonts -->
+</head>
+
+
+<body>
+
+    <div class="container background">
+
+        <header>
+            <nav class="navbar navbar-inverse onglet">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Bienvenue chez <strong>Bagshare</strong></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li {% if link == "home" %}class="active"{% endif %}><a href="/">Accueil</a></li>
+                            <!-- dropdown -->
+                            {% if authenticated == true %}
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" {% if link == "myAccount" %}class="active"{% endif %}>Mon compte<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="sous-menu">Mes offres</a></li>
+                                    <li><a href="/profil" class="sous-menu">Mon profil</a></li>
+                                    <li><a href="#" class="sous-menu">Gérer mon compte</a></li>
+                                </ul>
+                            </li>
+                            <!-- / dropdown -->
+                            <li><a href="/messages" {% if link == "messages" %}class="active"{% endif %}>Mes messages <span class="notification-message">0</span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                            {% else %}
+                            <li class="inscriptionBtn {% if link == 'register' %}active{% endif %}"><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> S'inscrire</a></li>
+                            {% endif %}
+                            <li>
+                                {% if authenticated == true %}
+                                <a href="logout"><span class="glyphicon glyphicon-log-out"></span> Se deconnecter</a>
+                                {% else %}
+                                <a href="/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span> Se connecter</a>
+                                {% endif %}
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- logo -->
+            <p class="logo hidden-xs"><img alt="logo Bagshare" src="../img/logo.png" width="300"></p>
+            <p class="logo hidden-md hidden-lg hidden-sm"><img alt="logo Bagshare" src="../img/logo.png" width="253"></p>
+            <!-- / logo -->
+
+            <!-- descriptif -->
+            <h2 class="descriptif-md hidden-xs hidden-sm">Faite envoyer votre colis et lettre partout dans le monde avec une personne de confiance situé près de chez vous.</h2>
+            <h2 class="descriptif-sm-xs hidden-md hidden-lg">Faite envoyer votre colis et lettre partout dans le monde avec une personne de confiance situé près de chez vous.</h2>
+
+            <!-- / descriptif-->
+        </header>
+
+
+
+        <!-- content -->
+
+        {% block content %} {% endblock %}
+
+        <!-- / content -->
+
+
+
+        <!-- Modal -->
+
+        <!-- Contact -->
+        <div class="modal fade" id="contactModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><i class="fa fa-mobile" aria-hidden="true" style="font-size:50px;"></i></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <p id="contact-numero">06 05 69 87</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Fermer</button>
+                        <p class="modal-message"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Je refuse toute démarchage commercial</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- / Contact -->
+
+        <!-- Message -->
+        <div class="modal fade" id="messageModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><i class="fa fa-envelope-open" aria-hidden="true" style="font-size:50px;"></i></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" id="message" method="post" action="/login">
+                            <div class="form-group">
+                                <label for="prenom-message"><span class="glyphicon glyphicon-user"></span> Votre prénom *</label>
+                                <input type="text" class="form-control" id="prenom-message" name="prenom_message" placeholder="Entrez votre prénom ici">
+                                <p class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="mail-message"><i class="fa fa-address-book" aria-hidden="true"></i></span> Votre addresse mail *</label>
+                                <input type="email" name="mail_message" class="form-control" id="mail-message" placeholder="ex: john@doe.fr">
+                                <p class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="contenu-message"><i class="fa fa-pencil-square" aria-hidden="true"></i></span> Votre message * </label>
+                                <p>[min : 10 caractères, max : 1000 caractères]</p>
+                                <textarea class="form-control" id="contenu-message" name="contenu_message" placeholder="Ecrivez votre message ici" rows="6"></textarea>
+                                <p class="help"></p>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-paper-plane" aria-hidden="true" style="font-size: 15px; color: white;"></i> Envoyer</button>
+                            <p class="help"></p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Fermer</button>
+                        <p class="modal-message"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Je refuse toute démarchage commercial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / Message -->
+
+        <!-- Inscription -->
+
+        <div class="modal fade" id="inscriptionModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><i class="fa fa-user-circle" aria-hidden="true" aria-hidden="true" style="font-size:50px;"></i></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                     
+                            <form role="form" class="form" method="post" action="/register">
+                            <div class="form-group">
+                                <label for="nom"><span class="glyphicon glyphicon-user"></span> Votre nom * </label>
+                                <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom ici" name="username" />
+                                
+                                <p class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom"><span class="glyphicon glyphicon-user"></span> Votre prénom * </label>
+                                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom ici" name="userFirstName" />
+                                
+                                <p class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="mail"><i class="fa fa-address-book" aria-hidden="true"></i></span> Votre addresse mail</label>
+                                <input type="email" class="form-control" id="mail" placeholder="ex: john@doe.fr" name="usermail" />
+                                
+                                <p class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i></span> Votre numéro de téléphone *</label>
+                                <input type="phone" class="form-control" id="phone" placeholder="entrez votre numéro de télephone ici" name="userPhone" />
+                                
+                                <p class="help"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password_1"><i class="fa fa-key" aria-hidden="true"></i></span> Votre mot de passe *</label>
+                                <input type="password" id="password_1" class="form-control" placeholder="entrez votre mots de passe ici" name="password" />
+                
+                                <p class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="password_2"><i class="fa fa-key" aria-hidden="true"></i></span> Confirmer votre mot de passe *</label>
+                                <input type="password" id="password_2"
+                                       name = "password_2" class="form-control" placeholder="confirmer votre mots de passe ici" />
+            
+                                <p class="help"></p>
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-sign-in" aria-hidden="true"></i> s'inscrire</button>
+                            <p class="help"></p>
+            </form>
+    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Fermer</button>
+                        <p class="modal-message"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Veillez remplir complètement le formulaire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- / Inscription -->
+
+        <!-- / Modal -->
+
+
+
+
+
+        <footer>
+            <p>Developped by <strong><a href="#">S.Rabonarijaona</a></strong> at <strong><a href="#">Mavitrika</a></strong></p>
+
+
+        </footer>
+
+
+
+    </div>
+
+
+    <!-- javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../js/ajaxGet.js"></script>
+    <script type="application/javascript" src="../js/modal.js"></script>
+    <script type="application/javascript" src="../js/validation_formulaire_functions.js"></script>
+    <script type="application/javascript" src="../js/validation_saisis_ville.js"></script>
+    <script type="application/javascript" src="../js/validation_rechercher_offre.js"></script>
+    <script type="application/javascript" src="../js/validation_inscription.js"></script>
+    <script type="application/javascript" src="../js/validation_message.js"></script>
+    <script type="application/javascript" src="../js/validation_ajoutOffre.js"></script>
+    <!-- / javascript-->
+</body>
+
+
+</html>

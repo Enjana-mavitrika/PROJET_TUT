@@ -1,0 +1,65 @@
+{% extends "layout.html.twig" %}
+{% block title %}Détail de l'offre{% endblock %}
+
+{% block content %}
+<!-- content -->
+
+        <main>
+
+
+
+            <!-- les offres -->
+
+            <h3>OFFRE DE {USERNAME}</h3>
+            <article class="offre container-fluid">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                        <span class="offre-indication-ville">Départ : </span>
+                        <strong class="offre-ville">PARIS, FRANCE</strong>
+                        <p class="offre-dateTime"><i class="fa fa-calendar" aria-hidden="true"></i><br/>
+Le 11 Septembre 2018 à 11h00</p>
+                    </div>
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <span class="offre-indication-ville">Retour : </span>
+                        <strong class="offre-ville">TANANARIVE, MADAGASCAR</strong>
+                        <p class="offre-dateTime"><i class="fa fa-calendar" aria-hidden="true"></i>
+<br/>Le 12 Septembre 2018 à 13h15</p>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-5 col-sm-12 col-xs-12">
+                        <p class="prix-colis col-md-6 col-sm-6 col-xs-6">7 &euro; <br/>KG</p>
+                        <p class="prix-enveloppe col-md-6 col-sm-6 col-xs-6">2 &euro; <br/>ENV</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p class="offre-quantite-dispo">Quantité disponible : </p>
+                        <p class="offre-dispo-colis col-md-6 col-sm-12 col-xs-6"><strong class="offre-quantite">10</strong><br/><strong class="offre-unite">kg</strong></p>
+                        <p class="offre-dispo-lettre col-md-6 col-sm-12 col-xs-6"><strong class="offre-quantite">15</strong> <br/><strong class="offre-unite">enveloppes</strong></p>
+                        
+                    </div>
+                    
+                    
+                        <div class="precision col-md-offset-1 col-md-5 col-sm-6">
+                            <p> Precision du vendeur :</p>
+                            <p> Les colis doivent arriver 2 jours avant le départ et doivent etre bien embalé sinon ce sera annulé</p>
+                        </div>
+                    <div class="col-md-12  col-sm-6 col-xs-12">
+                        <p class="col-md-offset-1 col-md-5">
+                        <button class="btn btn-success btn-lg" id="contactBtn"><i class="fa fa-mobile" aria-hidden="true" style="font-size: 25px;"></i> CONTACT</button>
+                        </p>
+                        <p class="col-md-5">
+                        <button class="btn btn-info btn-lg" id="messageBtn"><i class="fa fa-envelope-o" arcol-md-5ia-hidden="true"></i> MESSAGE</button>
+                        </p>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- / les offres -->
+
+
+        </main>
+
+        <!-- / content -->
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Mes messages {% endblock %}
+
+{% block content %}
+
+<main>
+
+
+
+            <h3>VOS MESSAGES</h3>
+            <section id="message">
+                <article class="container-fluid">
+                    <div class="col-md-1 col-md-offset-1 message-sign-false">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="col-md-6 col-sm-6 col-xs-6"><span class="message-prenom">Prénom : </span><strong class="message-prenom-valeur">Username</strong></p>
+                        <p class="col-md-6 col-sm-6 col-xs-6"><span class="message-offre">Offre:</span> <strong class="message-offre-valeur">PARIS <i class="fa fa-arrow-right" aria-hidden="true"></i> MADAGASCAR</strong></p>
+                    <p class="col-md-12 col-sm-12 col-xs-12">
+                        Bonjour, je suis intéressé par votre offre pouvez vous m'envoyer votre numéro de telephone.
+                    </p>
+                        <p class="col-md-12 col-sm-12 col-xs-12">PS : Pour répondre à Username, envoyer lui un message sur <a href="mailto: rabonarijaona.john@gmail.com">rabonarijaona.john@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-xs btn-success">marquer comme lus</button>
+                        <button class="btn btn-xs btn-danger">supprimer</button>
+                    </div>
+                </article>
+                <article class="container-fluid">
+                    <div class="col-md-1 col-md-offset-1 message-sign-true">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="col-md-6 col-sm-6 col-xs-6"><span class="message-prenom">Prénom : </span><strong class="message-prenom-valeur">Username</strong></p>
+                        <p class="col-md-6 col-sm-6 col-xs-6"><span class="message-offre">Offre:</span> <strong class="message-offre-valeur">PARIS <i class="fa fa-arrow-right" aria-hidden="true"></i> MADAGASCAR</strong></p>
+                    <p class="col-md-12 col-sm-12 col-xs-12">
+                        Bonjour, je suis intéressé par votre offre pouvez vous m'envoyer votre numéro de telephone.
+                    </p>
+                        <p class="col-md-12 col-sm-12 col-xs-12">PS : Pour répondre à Username, envoyer lui un message sur <a href="mailto: rabonarijaona.john@gmail.com">rabonarijaona.john@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-2">
+                        
+                        <button class="btn btn-xs btn-danger">supprimer</button>
+                    </div>
+                </article>
+                
+                <div class="container-fluid col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <ul class="pagination pagination-lg ">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+</div>
+                
+            </section>
+            
+
+
+        </main>
+
+{% endblock %}
