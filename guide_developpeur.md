@@ -6,19 +6,15 @@
 + Cloner repository dans votre dossier en utilisant ce lien:
 	       https://github.com/Enjana-mavitrika/PROJET_TUT.git
 	       tapez en ligne de commande:
-	       **cmd:>_**`git clone https://github.com/Enjana-mavitrika/PROJET_TUT.git`
+	       **cmd:>_** `git clone https://github.com/Enjana-mavitrika/PROJET_TUT.git`
 
 
 + Creer les branches OBLIGATOIRE suivantes
 	  	dev_data
 		dev_sniper
-
 		tapez en ligne de commande:
-		**cmd:>_** 
-		```
-		git branch dev_data 
-		git branch dev_sniper
-		```
+		**cmd:>_** `git branch dev_data` ensuite `git branch dev_sniper`
+		`
 
 
 + Connecter les branches locales avec les branches distant
