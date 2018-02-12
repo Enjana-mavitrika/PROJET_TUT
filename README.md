@@ -1,7 +1,7 @@
-# PROJET_TUT : INTERFACE MOBILE (ANDROID)
+# PROJET_TUT : APPLICATION WEB
 
 ## DESCRIPTION
-  Répertoire de developpement contenant **LES CODES DE L'INTERFACE MOBILE FONCTIONNELS ET TESTES**
+  Répertoire de developpement pour **PARTAGER LES CODES DE L'APPLICATION WEB**
   
 ## AUTORISATION
-  ** Commit ** : KEVIN, DAN
+  ** Commit ** : SOLOFO, OUSSEMA, HABIB
