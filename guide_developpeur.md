@@ -14,8 +14,11 @@
 		dev_sniper
 
 		tapez en ligne de commande:
-		**cmd:>_** `git branch dev_data`
-		**cmd:>_** `git branch dev_sniper`
+		**cmd:>_** 
+		```
+		git branch dev_data 
+		git branch dev_sniper
+		```
 
 
 + Connecter les branches locales avec les branches distant
