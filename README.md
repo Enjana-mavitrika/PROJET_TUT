@@ -1,7 +1,7 @@
-# PROJET_TUT
+# PROJET_TUT : BASE DE DONNEE
 
 ## DESCRIPTION
-  Répertoire principal contenant les programmes **FONCTIONNELS ET TESTES**
+  Répertoire principal contenant les **REQUETES SQL FONCTIONNELS ET TESTES**
   
 ## AUTORISATION
   ** Commit ** : CHEF DE PROJET
