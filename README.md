@@ -1,7 +1,7 @@
 # PROJET_TUT : INTERFACE MOBILE (ANDROID)
 
 ## DESCRIPTION
-  Répertoire de developpement contenant **LES CODES DE L'INTERFACE MOBILE FONCTIONNELS ET TESTES**
+  Répertoire de developpement cpour **PARTAGER LES CODES DE L'INTERFACE MOBILE**
   
 ## AUTORISATION
   ** Commit ** : KEVIN, DAN
