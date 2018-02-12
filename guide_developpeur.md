@@ -15,14 +15,9 @@
 tapez en ligne de commande  `git branch --set-upstream-to=origin/dev_data dev_data` ensuite `git branch --set-upstream-to=origin/dev_sniper dev_sniper`
 
 
-+ NB: CREER ET CONNECTER LES BRANCHES SUIVANTES POUR LES CONCERNÉS en utilisant les memes commandes que précedemment !!
-	    - KEVIN ET DAN :
-	    	  dev_app
-	    	  master_app (seul le responsable d'equipe)
-
-	    - SOLOFO, OUSSEMA ET HABIB :
-	    	  dev_web
-	    	  master_web (seul le responsable d'equipe)
++ NB: CREER ET CONNECTER LES BRANCHES SUIVANTES POUR LES CONCERNÉS en utilisant les memes commandes que précedemment
+  - KEVIN ET DAN : **dev_app** et ** master_app** _(seul le responsable d'equipe)_
+  - SOLOFO, OUSSEMA ET HABIB : **dev_web** et **master_web** _(seul le responsable d'equipe)_
 
 
 	
