@@ -16,7 +16,7 @@ tapez en ligne de commande  `git branch --set-upstream-to=origin/dev_data dev_da
 
 
 + NB: CREER ET CONNECTER LES BRANCHES SUIVANTES POUR LES CONCERNÉS en utilisant les memes commandes que précedemment
-  - KEVIN ET DAN : **dev_app** et ** master_app** _(seul le responsable d'equipe)_
+  - KEVIN ET DAN : **dev_app** et **master_app** _(seul le responsable d'equipe)_
   - SOLOFO, OUSSEMA ET HABIB : **dev_web** et **master_web** _(seul le responsable d'equipe)_
 
 
