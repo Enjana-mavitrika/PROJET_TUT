@@ -1,7 +1,7 @@
-# PROJET_TUT : INTERFACE MOBILE (ANDROID)
+# PROJET_TUT : REQUETE SQL
 
 ## DESCRIPTION
-  Répertoire de developpement cpour **PARTAGER LES CODES DE L'INTERFACE MOBILE**
+  Répertoire de developpement pour **PARTAGER LES REQUETES SQL**
   
 ## AUTORISATION
-  ** Commit ** : KEVIN, DAN
+  ** Commit ** : TOUT LE MONDE
