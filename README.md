@@ -1,7 +1,7 @@
-# PROJET_TUT : REQUETE SQL
+# PROJET_TUT : SNIPER (SYSTEME DE CIBLAGE)
 
 ## DESCRIPTION
-  Répertoire de developpement pour **PARTAGER LES REQUETES SQL**
+  Répertoire de developpement pour **PARTAGER LES CODES DU SYSTEME DE CIBLAGE**
   
 ## AUTORISATION
   ** Commit ** : TOUT LE MONDE
