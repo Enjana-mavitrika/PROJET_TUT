@@ -24,8 +24,9 @@ tapez en ligne de commande  `git branch --set-upstream-to=origin/dev_data dev_da
 
 + Systeme/moteur de Recommandation:
  	- http://lim.univ-reunion.fr/staff/fred/M2info/16-17/Stages/Rapports/Andrianambinina%20Rabenarivo_88590_assignsubmission_file_Andrianambinina_Rabenarivo-Rapport.pdf
- 	- http://pageperso.lif.univ-mrs.fr/~andreea.dragut/enseignementWebMining/r/tp4_5.html
- 	- https://eric.univ-lyon2.fr/~ricco/cours/slides/WM.B%20-%20Filtrage%20Collaboratif%20-%20Recommandation.pdf
+ 	- http://pageperso.lif.univ-mrs.fr/~andreea.dragut/enseignementWebMining/r/tp4_5.html **un petit tp**
+ 	- https://eric.univ-lyon2.fr/~ricco/cours/slides/WM.B%20-%20Filtrage%20Collaboratif%20-%20Recommandation.pdf **intéressant car des exemples concrets sont données pour les algos présentés**
+	- http://ubee.enseeiht.fr/dokuwiki/lib/exe/fetch.php?media=parcoursmm:rapportstagedevatics.pdf **interessant pour s'inspirer sur la démarche pour mettre en place le système** 
 
 
 	
