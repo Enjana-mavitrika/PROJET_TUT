@@ -29,4 +29,8 @@ tapez en ligne de commande  `git branch --set-upstream-to=origin/dev_data dev_da
 	- http://ubee.enseeiht.fr/dokuwiki/lib/exe/fetch.php?media=parcoursmm:rapportstagedevatics.pdf - **interessant pour s'inspirer sur la démarche pour mettre en place le système** 
 
 
+## Outils de travail 
++ Convertir fichier Markdown en pdf : 
+	- http://www.markdowntopdf.com/
+
 	
