@@ -13,4 +13,4 @@ qui fonctionne tres bien avec quelques INSERT
 programme utilisé pour modélisé et crée les requetes : MySQL Workbench https://dev.mysql.com/downloads/workbench/ 
 je vous conseille de l'installer et le fichier source db1.mwb 
 
-~~~~ ✌☮
+ ✌☮
