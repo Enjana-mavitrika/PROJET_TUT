@@ -1,7 +1,7 @@
-# PROJET_TUT
+# LES TACHES
 
 ## DESCRIPTION
-  Répertoire principal contenant les programmes **FONCTIONNELS ET TESTES**
+  Répertoire principal contenant les **TACHES** à réaliser
   
 ## AUTORISATION
-**Commit:** CHEF DE PROJET
+**Commit:** Oussama
