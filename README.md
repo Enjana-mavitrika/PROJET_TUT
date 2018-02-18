@@ -1,7 +1,7 @@
 # PROJET_TUT
 
 ## DESCRIPTION
-  Répertoire principal contenant les programmes **FONCTIONNELS ET TESTES**
+  Répertoire principal contenant notre **ORGANISATION** pour le projet 
   
 ## AUTORISATION
-  ** Commit ** : CHEF DE PROJET
+  **Commit** : Habib 
