@@ -22,16 +22,16 @@
 
 **Habib:**
 -affichage les offres par : 
-1.Ville depart et Ville arrivee
-2.Date Depart et Arrive
+*Ville depart et Ville arrivee
+*Date Depart et Arrive
 -affichage des commentaire par note pour un offre donné 
 
 **Oussema:**
 -Filter offres par:
-1.nb kilo ( on vire les <)
-2.prix(max)
-3.company
-4.utilisateurs(confirmé)
+*nb kilo ( on vire les <)
+*prix(max)
+*company
+*utilisateurs(confirmé)
 
 ## INSTRUCTIONS
 
