@@ -2,19 +2,19 @@
 
 ## Auteur
 
-   *Prenom
+   * Prenom
 ----------------------------------------------------------
 
 ## Objectifs
 
-   +Obj1
-	-detail Obj1
-   +Obj2
-	-detail Obj2
-   +Obj3
-	-detail Obj3
-   +Obj4
-	-detail Obj4
++ Obj1
+	- detail Obj1
++ Obj2
+	- detail Obj2
++ Obj3
+	- detail Obj3
++ Obj4
+	- detail Obj4
 
 -------------------------------------------------------------
 
