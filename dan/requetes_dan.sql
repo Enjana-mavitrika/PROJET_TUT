@@ -30,4 +30,16 @@ DELIMITER ;
 
 
 -- afficher information d'un user
-select nom, prenom, mail from t_user
+
+DELIMITER |
+
+CREATE PROCEDURE affichage_profil_utilisateur(IN p_id INT)
+BEGIN
+
+SELECT nom, prenom, mail, tel, adresse, login, est_confirmee, identite_confirme 
+	FROM T_USER 
+		WHERE id=p_id;
+
+END |
+
+DELIMITER ;
