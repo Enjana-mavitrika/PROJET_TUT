@@ -1,5 +1,17 @@
+--****************************************
+-- Auteur : Dan
+-- Fonctionnalités : 
+--    - afficher_user_byLogin(user_login VARCHAR(45))....selectionne un user par son login
+--
+
+DELIMITER |
 -- selectionner un user à partir de son login
-select nom, prenom from t_user -- where login = "login-user"
+CREATE PROCEDURE afficher_user_byLogin (user_login VARCHAR(45))
+BEGIN
+  SELECT * FROM T_USER WHERE login = user_login;
+END|
+
+DELIMITER ;
 
 -- afficher offres disponibles - indisponibles pour un user
 -- je savais pas trop comment la faire comme je voulais
