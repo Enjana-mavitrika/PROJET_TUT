@@ -4,8 +4,9 @@
 --    - afficher_user_byLogin(user_login VARCHAR(45))....selectionne un user par son login
 --
 
-DELIMITER |
+
 -- selectionner un user à partir de son login
+DELIMITER |
 CREATE PROCEDURE afficher_user_byLogin (user_login VARCHAR(45))
 BEGIN
   SELECT * FROM T_USER WHERE login = user_login;
@@ -20,7 +21,7 @@ DELIMITER ;
 DELIMITER $$ 
 CREATE PROCEDURE offre_dispo_u(IN idu INT)
 BEGIN
-SELECT o.id 
+SELECT *
 FROM T_OFFRE o
 WHERE o.id_user=idu and nb_kg_dispo>0 and nb_env_dispo >0 ;
 END $$
