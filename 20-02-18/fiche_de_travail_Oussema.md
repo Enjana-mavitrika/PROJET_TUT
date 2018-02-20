@@ -1,19 +1,28 @@
 # Fiche de travail de groupe
 ## Auteur
-   	Prenom
+   	Oussema
 ----------------------------------------------------------
 
 ## Objectifs
 
-+ Obj1
-	- detail Obj1
-+ Obj2
-	- detail Obj2
-+ Obj3
-	- detail Obj3
-+ Obj4
-	- detail Obj4
++Date au recherche de bas
+	-ajouter avec ville depart / arrive destination la date a partir de quel date 
+	
++ Tous les offres
+	- ajouter a la page daccueil affichage de tous les offres dispo
 
++ 	Filtres Recherche
+	-ajouter les filtres a la recherche
+	
++Footer
+	-ajouter un footer a l'index	
+	-partenaire // lien appli android
+
++changer la langue
+
++reseau sociaux
+
++slideshow explique comment le site fonctionne qui depasse pas 15 sec ou 20
 -------------------------------------------------------------
 
 ## Plan de la réunion
