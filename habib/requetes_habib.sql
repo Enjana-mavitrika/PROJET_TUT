@@ -33,7 +33,7 @@ DELIMITER ;
 CALL affichage_offre("Paris","Tunis","2018-02-25 07:00:00","2018-02-25 09:00:00");
 
 
--- son date d'arrive
+-- sans date d'arrive
 
 CALL affichage_offre("Paris","Tunis","2018-02-25 07:00:00",NULL);
 
@@ -42,21 +42,19 @@ CALL affichage_offre("Paris","Tunis","2018-02-25 07:00:00",NULL);
 -- affichage des commentaire par note pour un offre donné          - 
 --------------------------------------------------------------------
 
-----------------------------------------------------------------------
--- Faut pas donner un nom pour l'offre pour recherche par nom, non?  -
----------------------------------------------------------------------- 
+-- Faut pas donner un nom pour l'offre pour recherche par nom, non?  
 
 DELIMITER |
 
- CREATE PROCEDURE affichage_commentaire_note(IN p_id int(11))
+ CREATE PROCEDURE affichage_commentaire_note(IN ido int, IN note int)
  BEGIN
- SELECT texte, note FROM T_AVIS
- WHERE id_user=(SELECT id FROM T_OFFRE WHERE id=p_id);
+ SELECT a.* FROM T_AVIS a ,T_OFFRE o ,T_RESERVER r 
+ WHERE o.id=r.id_offre and r.id_avis_c=a.id and o.id=ido and a.note=note  ;
  END | 
 
 DELIMITER ;
 
-CALL affichage_commentaire_note(1);
+CALL affichage_commentaire_note(1,8);
 
 
 
