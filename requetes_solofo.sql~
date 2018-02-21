@@ -1,0 +1,87 @@
+--***********************************************
+--						*
+-- Auteur : S.RABONARIJAONA			*
+--						*
+--************************************************
+
+-- lister les avis sur un utilisateur par son login ou id
+DELIMITER |
+CREATE PROCEDURE lister_avis_user (IN user_id INT)
+BEGIN
+	SELECT t_avis.id, t_avis.note, t_avis.texte
+	FROM t_avis, t_reserver, t_offre
+	WHERE t_reserver.id_user = user_id
+	AND t_reserver.id_avis_v = t_avis.id -- avis du vendeur sur lui (si client)
+	OR t_reserver.id_offre = t_offre.id
+	AND t_reserver.id_avis_c = t_avis.id -- avis du client sur lui (si vendeur)
+	AND t_offre.id_user = user_id;
+END|
+
+
+
+-- afficher note generale d'un utilisateur
+CREATE PROCEDURE calculer_note_generale (IN user_id INT)
+BEGIN
+	SELECT AVG(t_avis.note) -- moyenne sur la liste de sa note
+	FROM t_avis, t_reserver, t_offre
+	WHERE t_reserver.id_user = user_id
+	AND t_reserver.id_avis_v = t_avis.id -- note du vendeur sur lui (si client)
+	OR t_reserver.id_offre = t_offre.id
+	AND t_reserver.id_avis_c = t_avis.id -- note du client sur lui (si vendeur)
+	AND t_offre.id_user = user_id;
+END|
+
+
+-- inserer une ligne dans la table t_user_history
+CREATE PROCEDURE inserer_t_user_history (id INT, id_user INT, date_inscri DATETIME, nom VARCHAR(45), prenom VARCHAR(45), mail VARCHAR(45), tel VARCHAR(45), adresse VARCHAR(150), login VARCHAR(45), password VARCHAR(45), est_confirmee CHAR(1), date_modif DATETIME, ip_adress VARCHAR(45), identite VARCHAR(45), identite_confirme CHAR(1))
+BEGIN
+	INSERT INTO t_user_history VALUES (id, id_user, date_inscri, nom, prenom, mail, tel, adresse, login, password, est_confirmee, date_modif, ip_adress, identite, identite_confirme);
+END|
+
+
+
+-- declencheur pour enregistrer l'historique de la table t_user
+CREATE TRIGGER t_user_update AFTER UPDATE ON t_user
+FOR EACH ROW
+BEGIN
+	CALL inserer_t_user_history (0, OLD.id, OLD.date_inscri, OLD.nom, OLD.prenom, OLD.mail, OLD.tel, OLD.adresse, OLD.login, OLD.password, OLD.est_confirmee, OLD.date_modif, OLD.ip_adress, OLD.identite, OLD.identite_confirme);
+END|
+
+
+SET foreign_key_checkers = 0|
+-- creer la table t_offre_history
+CREATE TABLE t_offre_history(
+       id INT PRIMARY KEY AUTO_INCREMENT,
+       id_offre INT,
+       id_user INT,
+       date_ajout DATETIME,
+       date_modif DATETIME,
+       nb_kg_dispo INT,
+       nb_env_dispo INT,
+       ville_depart VARCHAR(45),
+       ville_arrivee VARCHAR(45),
+       prix_kg INT,
+       prix_env INT,
+       date_modif DATETIME,
+       FOREIGN KEY (id_offre) REFERENCES t_offre(id),
+       FOREIGN KEY (id_user) REFERENCES t_user(id)
+)ENGINE=INNODB|
+
+-- creer la table t_precision history
+CREATE TABLE t_precision_history(
+       id INT PRIMARY KEY AUTO_INCREMENT,
+       id_precision INT,
+       id_offre INT,
+       numero_vol VARCHAR(45),
+       dimensionL INT,
+       dimensionH INT,
+       nom_company VARCHAR(45),
+       detail VARCHAR(200),
+       FOREIGN KEY (id_precision) REFERENCES t_precision(id),
+       FOREIGN KEY (id_offre) REFERENCES t_offre(id)
+)ENGINE=INNODB|
+
+SET foreign_key_checkers = 1|
+
+-- inserer une ligne dans la table t_offre_history
+CREAATE PROCEDURE inserer_t_offre_history ()
