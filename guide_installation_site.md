@@ -1,8 +1,8 @@
 # GUIDE INSTALLATION Bagshare.com
 ## Etape 1
     rajouter dans le fichier : C:/Windows/System32/drivers/etc/hosts
-        **127.0.0.1 localhost**
-        **127.0.0.1 Bagshare.com**
+        127.0.0.1 localhost
+        127.0.0.1 Bagshare.com
         
 ## Etape 2
     rajouter dans le fichier : ..(lien vers serveur)/conf/extra/http-vhosts.conf
