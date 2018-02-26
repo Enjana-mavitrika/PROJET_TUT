@@ -40,3 +40,25 @@ doit Creer un dossier avec son prenom et ajouter un fichier requetes_prenom.sql<
 
 
 BON COURAGE !!! ☮ 
+
+
+## TACHES debut(26/02/2018) ---- Fin(04/03/2018 avant 00h)
+
+**Oussema:**
+PAGE D'Accueil: 
+-Trier les offres: ville depart - ville arrivé - date (facultatif)
+-Button Remonter en haut de la page
+-nous contacter
+-pannel -->Pub
+-ajouter lister tous les offre dispo
+
+**Solofo:**
+Footer: 
+-logo et liens parteners 
+-telechergement app android
+-Reseaux sociaux  
+- a propos/ mention/ nous contacter
+au dessous de footer: Assurence / meuilleurs avis /lien help / faq
+
+
+
