@@ -57,7 +57,7 @@ Footer: <br/>
 -logo et liens parteners <br/>
 -telechergement app android<br/>
 -Reseaux sociaux  <br/>
-- a propos/ mention/ nous contacter<br/>
+-a propos/ mention/ nous contacter<br/>
 au dessous de footer: Assurence / meuilleurs avis /lien help / faq<br/>
 
 
