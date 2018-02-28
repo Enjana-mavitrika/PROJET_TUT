@@ -33,11 +33,11 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li {% if link == "home" %}class="active"{% endif %}><a href="/">Accueil</a></li>
+                            <li {% if link=="home" %}class="active" {% endif %}><a href="/">Accueil</a></li>
                             <!-- dropdown -->
                             {% if authenticated == true %}
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" {% if link == "myAccount" %}class="active"{% endif %}>Mon compte<span class="caret"></span></a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" {% if link=="myAccount" %}class="active" {% endif %}>Mon compte<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="sous-menu">Mes offres</a></li>
                                     <li><a href="/profil" class="sous-menu">Mon profil</a></li>
@@ -45,20 +45,18 @@
                                 </ul>
                             </li>
                             <!-- / dropdown -->
-                            <li><a href="/messages" {% if link == "messages" %}class="active"{% endif %}>Mes messages <span class="notification-message">0</span></a></li>
+                            <li><a href="/messages" {% if link=="messages" %}class="active" {% endif %}>Mes messages <span class="notification-message">0</span></a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            
+
                             {% else %}
                             <li class="inscriptionBtn {% if link == 'register' %}active{% endif %}"><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> S'inscrire</a></li>
                             {% endif %}
                             <li>
                                 {% if authenticated == true %}
-                                <a href="logout"><span class="glyphicon glyphicon-log-out"></span> Se deconnecter</a>
-                                {% else %}
-                                <a href="/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span> Se connecter</a>
-                                {% endif %}
-                        </li>
+                                <a href="logout"><span class="glyphicon glyphicon-log-out"></span> Se deconnecter</a> {% else %}
+                                <a href="/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span> Se connecter</a> {% endif %}
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -162,51 +160,50 @@
                         <h4><i class="fa fa-user-circle" aria-hidden="true" aria-hidden="true" style="font-size:50px;"></i></h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
-                     
-                            <form role="form" class="form" method="post" action="/register">
+
+                        <form role="form" class="form" method="post" action="/register">
                             <div class="form-group">
                                 <label for="nom"><span class="glyphicon glyphicon-user"></span> Votre nom * </label>
                                 <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom ici" name="username" />
-                                
+
                                 <p class="help"></p>
                             </div>
                             <div class="form-group">
                                 <label for="prenom"><span class="glyphicon glyphicon-user"></span> Votre prénom * </label>
                                 <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom ici" name="userFirstName" />
-                                
+
                                 <p class="help"></p>
                             </div>
                             <div class="form-group">
                                 <label for="mail"><i class="fa fa-address-book" aria-hidden="true"></i></span> Votre addresse mail</label>
                                 <input type="email" class="form-control" id="mail" placeholder="ex: john@doe.fr" name="usermail" />
-                                
+
                                 <p class="help"></p>
                             </div>
                             <div class="form-group">
                                 <label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i></span> Votre numéro de téléphone *</label>
                                 <input type="phone" class="form-control" id="phone" placeholder="entrez votre numéro de télephone ici" name="userPhone" />
-                                
+
                                 <p class="help"></p>
                             </div>
 
                             <div class="form-group">
                                 <label for="password_1"><i class="fa fa-key" aria-hidden="true"></i></span> Votre mot de passe *</label>
                                 <input type="password" id="password_1" class="form-control" placeholder="entrez votre mots de passe ici" name="password" />
-                
+
                                 <p class="help"></p>
                             </div>
                             <div class="form-group">
                                 <label for="password_2"><i class="fa fa-key" aria-hidden="true"></i></span> Confirmer votre mot de passe *</label>
-                                <input type="password" id="password_2"
-                                       name = "password_2" class="form-control" placeholder="confirmer votre mots de passe ici" />
-            
+                                <input type="password" id="password_2" name="password_2" class="form-control" placeholder="confirmer votre mots de passe ici" />
+
                                 <p class="help"></p>
                             </div>
 
                             <button type="submit" class="btn btn-success btn-block"><i class="fa fa-sign-in" aria-hidden="true"></i> s'inscrire</button>
                             <p class="help"></p>
-            </form>
-    
+                        </form>
+
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Fermer</button>
@@ -224,28 +221,154 @@
 
 
 
-        <footer>
-            <p>Developped by <strong><a href="#">S.Rabonarijaona</a></strong> at <strong><a href="#">Mavitrika</a></strong></p>
+
+
+        <section>
+            <h2 class="text-center">Meilleur avis</h2>
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <p>"J'adore ce site !"<br><span>toto, Voyageur</span></p>
+                    </div>
+                    <div class="item">
+                        <p>"Bonne idée les gars."<br><span>John Doe, Steward</span></p>
+                    </div>
+                    <div class="item">
+                        <p>"Bien joué !"<br><span>inconnu, Pilote</span></p>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+            </div>
+        </section>
+
+
+        <section class="row jumbotron" id="download-app">
+            <div class="col-md-7">
+
+
+
+            </div>
+            <div class="col-md-5">
+                <a class="btn btn-lg btn-success" href="app_download">
+                <i class="fa fa-android" style="font-size: 50px;"></i><hr/><span class="glyphicon glyphicon-download-alt"></span><strong>  CLIQUER ICI<br/> Pour télécharger l'application android <br/>ebagshare</strong>
+            </a>
+                <div class="alert alert-info" role="alert">
+                    <span class="glyphicon glyphicon-info-sign"></span> eBagshare à vos coté n'importe où et n'importe quand
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer class="row">
+
+
+            <!-- section partenaire officiel -->
+            <div class="row">
+                <h4>Nos partenaires officiel</h4>
+                <hr/>
+                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="col-md-4"><i class="fa fa-amazon" style="font-size:80px;"></i></div>
+                            <div class="col-md-4"><i class="fa fa-paypal" style="font-size:80px;"></i></div>
+                            <div class="col-md-4"><i class="fa fa-github" style="font-size:80px;"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="col-md-4"><i class="fa fa-amazon" style="font-size:80px;"></i></div>
+                            <div class="col-md-4"><i class="fa fa-paypal" style="font-size:80px;"></i></div>
+                            <div class="col-md-4"><i class="fa fa-github" style="font-size:80px;"></i></div>
+                        </div>
+                        <div class="item">
+                            <div class="col-md-4"><i class="fa fa-amazon" style="font-size:80px;"></i></div>
+                            <div class="col-md-4"><i class="fa fa-paypal" style="font-size:80px;"></i></div>
+                            <div class="col-md-4"><i class="fa fa-github" style="font-size:80px;"></i></div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row">
+
+                <!-- section nous contacter -->
+                <div class="col-md-5" id="contact-us">
+                    <h4>Nous contacter</h4>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Votre nom" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Votre email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Votre message" rows="5"></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button class="btn-info btn pull-right" type="submit">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <h4>Liens utiles</h4><hr/>
+                    <!-- section liens utiles -->
+                    <ul id="liens-util" class="nav">
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Mention</a></li>
+                    </ul>
+                    <h4>Réseaux sociaux</h4><hr/>
+                    <!-- section réseaux sociaux -->
+                    <ul id="social-media" class="row nav">
+                        <li><a href="facebook"><i class="fa fa-facebook-square"></i> Facebook</a></li> 
+                        <li><a href="youtube"><i class="fa fa-youtube-square"></i> Youtube</a></li>
+                    </ul>
+                    
+                    
+                </div>
 
 
         </footer>
 
 
 
-    </div>
+        </div>
 
 
-    <!-- javascript-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="application/javascript" src="../js/ajaxGet.js"></script>
-    <script type="application/javascript" src="../js/modal.js"></script>
-    <script type="application/javascript" src="../js/validation_formulaire_functions.js"></script>
-    <script type="application/javascript" src="../js/validation_saisis_ville.js"></script>
-    <script type="application/javascript" src="../js/validation_inscription.js"></script>
-    <script type="application/javascript" src="../js/validation_message.js"></script>
-    <script type="application/javascript" src="../js/validation_rechercher_offre.js"></script>
-    <!-- / javascript-->
+        <!-- javascript-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="../js/ajaxGet.js"></script>
+        <script type="application/javascript" src="../js/modal.js"></script>
+        <script type="application/javascript" src="../js/validation_formulaire_functions.js"></script>
+        <script type="application/javascript" src="../js/validation_saisis_ville.js"></script>
+        <script type="application/javascript" src="../js/validation_rechercher_offre.js"></script>
+        <script type="application/javascript" src="../js/validation_inscription.js"></script>
+        <script type="application/javascript" src="../js/validation_message.js"></script>
+        <script type="application/javascript" src="../js/validation_ajoutOffre.js"></script>
+        <!-- / javascript-->
 </body>
 
 
