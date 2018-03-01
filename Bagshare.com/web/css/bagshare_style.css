@@ -331,7 +331,7 @@ footer #social-media i{
 
 
 
-
+/* style carousel meilleur avis */
 section .carousel-control.right, section .carousel-control.left {
       background-image: none;
       color: #AC2925;
@@ -352,3 +352,12 @@ section .item p {
 section .item span {
       font-style: normal;
   }
+
+
+/* style infos : assurance et controle identite */
+#infos i{
+    font-size: 60px;
+}
+#infos {
+    text-align: center;
+}
